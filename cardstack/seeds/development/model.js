@@ -46,5 +46,10 @@ function initialModels() {
         }),
     ]);
 
-  return factory.getModels();
+    factory.addResource('pages').withAttributes({
+      permalink: " ", // a string with a single space
+      title: "Welcome to Cardstack!",
+    });
+
+    return factory.getModels();
 }
